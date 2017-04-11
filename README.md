@@ -19,7 +19,7 @@ defmodule MyApp do
   def start(_type, _args) do
     import Supervisor.Spec
 
-    PhoenixCowboyRemoveServerHeader.enable_for(:my_app, __MODULE__.Endpoint)
+    PhoenixCowboyRemoveServerHeader.enable_for(:my_app, __MODULE__.Endpoint) # Add in your app
 
 ```
 
