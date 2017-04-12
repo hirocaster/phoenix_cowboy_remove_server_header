@@ -1,0 +1,14 @@
+version: 2
+jobs:
+  build:
+    working_directory: /root/workspace
+    docker:
+      - image: hirocaster/phoenix_cowboy_remove_server_header:setup-circleci
+    steps:
+      - checkout
+      - run:
+          name: deps.get
+          command: mix deps.get
+      - run:
+          name: test
+          command: mix test
