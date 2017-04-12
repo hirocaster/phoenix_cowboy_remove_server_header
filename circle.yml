@@ -3,7 +3,7 @@ jobs:
   build:
     working_directory: /root/workspace
     docker:
-      - image: hirocaster/phoenix_cowboy_remove_server_header
+      - image: hirocaster/phoenix_cowboy_remove_server_header:setup-circleci
     steps:
       - checkout
       - run:
