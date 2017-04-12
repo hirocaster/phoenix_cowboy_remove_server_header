@@ -1,4 +1,25 @@
 defmodule PhoenixCowboyRemoveServerHeader do
+  @moduledoc """
+  Remove `server: Cowboy` in http headers from Cowboy
+
+  ## Usage
+
+  ``` elixir
+  defmodule MyApp do
+    use Application
+
+    def start(_type, _args) do
+      import Supervisor.Spec
+
+      PhoenixCowboyRemoveServerHeader.enable_for(:my_app, __MODULE__.Endpoint) # Add in your app
+
+      ...
+    end
+  end
+  ```
+  """
+
+  @doc"Enable remove `server: Cowboy` in http headers"
   def enable_for(otp_app, endpoint) do
     new_config =
       Application.get_env(otp_app, endpoint)
