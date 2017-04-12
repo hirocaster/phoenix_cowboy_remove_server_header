@@ -1,5 +1,7 @@
 # PhoenixCowboyRemoveServerHeader
 
+[![CircleCI](https://circleci.com/gh/hirocaster/phoenix_cowboy_remove_server_header.svg?style=svg)](https://circleci.com/gh/hirocaster/phoenix_cowboy_remove_server_header)
+
 Remove `server: Cowboy` in http headers from [Phoenix](http://www.phoenixframework.org/).
 
 ```
